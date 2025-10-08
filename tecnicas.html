@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Técnicas de Aseguramiento</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Técnicas de Aseguramiento de la Calidad</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="calidad.html">Gestión de la Calidad</a>
+    <a href="fundamentos.html">Fundamentos</a>
+    <a href="herramientas.html">Herramientas de Calidad</a>
+  </nav>
+
+  <section>
+    <div class="card">
+      <p>Pruebas de software: tipos, niveles y técnicas.</p>      
+    </div>
+
+    <div class="card">
+      <h1>Tipos</h1>
+      <h2>Funcionales</h2>
+      <p>Evalúan qué hace el sistema, según los requisitos funcionales.</p>
+          <ul>
+            <li><strong>Caja Negra: </strong>Se prueban las funcionalidades sin conocer el código interno. Se enfoca en las entradas y salidas del sistema.</li>
+            <li><strong>Aceptación: </strong>Pruebas realizadas por el cliente o usuario final para verificar si el sistema cumple con lo acordado (requisitos del negocio).</li>
+            <li><strong>Regresión: </strong>Se asegura que las funcionalidades que ya funcionaban siguen haciéndolo después de cambios, correcciones o nuevas funcionalidades.</li>
+            <li><strong>Integración (funcional):</strong> Prueban la interacción entre dos o más módulos para verificar que trabajen correctamente juntos.</li>
+          </ul>
+      <h2>No Funcionales</h2>    
+      <p>Evalúan cómo lo hace el sistema, no qué hace.</p>
+      <ul>
+            <li><strong>Rendimiento (Performance):</strong> Evalúa la rapidez, capacidad de respuesta y estabilidad del sistema bajo ciertas condiciones de carga.</li>
+            <li><strong>Seguridad: </strong>Evalúa si el sistema protege los datos y mantiene la confidencialidad, integridad y disponibilidad.</li>
+            <li><strong>Usabilidad: </strong>Verifica qué tan fácil e intuitivo es para los usuarios interactuar con el sistema.</li>
+            <li><strong>Compatibilidad: </strong>Evalúa si el sistema funciona correctamente en diferentes entornos (navegadores, dispositivos, sistemas operativos, resoluciones, etc.).</li>
+          </ul>
+      <p></p>
+    </div>
+
+    <div class="card">
+      <h1>Niveles de Pruebas</h1>
+      <p>Refieren a cuándo y sobre qué parte del software se hacen las pruebas.</p>
+          <ul>
+    <li><strong>Pruebas Unitarias:</strong> Se prueban unidades pequeñas e individuales de código, como funciones o métodos. Normalmente las realiza el desarrollador.</li>
+    <li><strong>Pruebas de Integración:</strong> Se verifica que múltiples módulos o componentes funcionen correctamente cuando se integran entre sí.</li>
+    <li><strong>Pruebas de Sistema:</strong> Se prueba el sistema completo, como un todo, para asegurarse de que cumple con los requisitos funcionales y no funcionales.</li>
+    <li><strong>Pruebas de Aceptación:</strong> Se realizan antes de liberar el producto. Las hace el cliente o usuario para validar que el software está listo para producción.</li>
+    <li><strong>Caja Negra:</strong> Pruebas sin conocimiento del código interno. Se enfoca en entradas y salidas.</li>
+    <li><strong>Partición de Equivalencia:</strong> Divide las entradas en grupos donde se espera el mismo comportamiento para reducir la cantidad de casos de prueba.</li>
+    <li><strong>Análisis de Valores Límite:</strong> : Se prueban los valores en los extremos del rango permitido, donde suelen aparecer errores (por ejemplo, si una edad válida es de 18 a 60, se prueban 17, 18, 60, 61).</li>
+    <li><strong>Caja Blanca:</strong> Pruebas con acceso al código. Se enfoca en la lógica interna.
+    <li><strong>Cobertura de Código:</strong> Mide cuánto del código fue ejecutado durante las pruebas (líneas, ramas, condiciones).</li>
+    <li><strong>Análisis de Caminos:</strong> Analiza todos los caminos posibles que puede tomar la ejecución del código para cubrir todos los flujos lógicos.</li>
+    <li><strong>Caja Gris:</strong> Pruebas con conocimiento parcial del código. Mezcla técnicas de caja blanca y negra.</li>
+    <li><strong>Pruebas de Interfaz:</strong> Verifican la correcta comunicación entre distintos módulos o entre el sistema y componentes externos.</li>
+    <li><strong>Pruebas de API:</strong> Evalúan si las interfaces de programación (REST, SOAP, etc.) funcionan como se espera al enviar y recibir datos.</li>
+  </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 - Proyecto académico</p>
+  </footer>
+</body>
+</html>
