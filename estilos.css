@@ -37,23 +37,8 @@ section {
   border-radius: 10px;
 }
 
-h1 {
-  color: #1E3A8A;
-}
-
 h2 {
   color: #1E3A8A;
-}
-
-ul {
-    list-style-type: none; 
-    padding: 0;           
-    margin: 0;            
-  }
-
-li {
-   margin: 10px;
-   padding: 10px;
 }
 
 footer {
@@ -70,4 +55,108 @@ footer {
   border-radius: 8px;
   margin: 10px auto;
   width: 70%;
+}
+
+/* Estilos para acordeón */
+.accordion {
+  background: #4682B4;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  margin: 10px auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion:hover {
+  background: #1E3A8A;
+}
+
+.accordion.active {
+  background: #1E3A8A;
+}
+
+.accordion:after {
+  content: '\002B'; /* símbolo + */
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.accordion.active:after {
+  content: "\2212"; /* símbolo - */
+}
+
+.panel {
+  background: #F4A460;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-radius: 8px;
+  margin: 0 auto 10px auto;
+  width: 70%;
+}
+
+.panel-content {
+  padding: 15px;
+}
+
+/* Estilos para sub-acordeón */
+.sub-accordion {
+  background: #5F9EA0;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  width: 90%;
+  margin: 10px auto;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-accordion:hover {
+  background: #4682B4;
+}
+
+.sub-accordion.active {
+  background: #4682B4;
+}
+
+.sub-accordion:after {
+  content: '\25B6'; /* símbolo ▶ */
+  font-size: 14px;
+}
+
+.sub-accordion.active:after {
+  content: "\25BC"; /* símbolo ▼ */
+}
+
+.sub-panel {
+  background: #FFE4B5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-radius: 6px;
+  margin: 0 auto 10px auto;
+  width: 90%;
+}
+
+.sub-panel-content {
+  padding: 15px;
+  text-align: left;
 }

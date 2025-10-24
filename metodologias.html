@@ -2,30 +2,173 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Herramientas de Calidad</title>
+  <title>Metodologías Ágiles - Calidad de Software</title>
   <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
   <header>
-    <h1>Herramientas de Calidad</h1>
+    <h1>Metodologías Ágiles</h1>
   </header>
-
+  
+  
   <nav>
-    <a href="index.html">Inicio</a>
-    <a href="calidad.html">Calidad</a>
-    <a href="fundamentos.html">Fundamentos</a>
-    <a href="tecnicas.html">Técnicas</a>
-    <a href="herramientas.html">Herramientas</a>
+      <a href="index.html">Inicio</a>
+    <a href="calidad.html">Gestión de la Calidad</a>
+    <a href="sdlc.html">SDLC</a>
+    <a href="metodologias.html">Metodologías Ágiles</a>
   </nav>
 
+
   <section>
-    <div class="card">
-      <p>Herramientas de gestión de pruebas, seguimiento de defectos y análisis de calidad.</p>
+    <button class="accordion">Scrum</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>Scrum es una metodología ágil de gestión de proyectos que se centra en la entrega incremental de valor y en la colaboración constante del equipo. Está diseñada para entornos donde los requisitos pueden cambiar con frecuencia, permitiendo adaptarse rápidamente a las necesidades del cliente o del producto.</p>
+        <p>Su estructura se basa en roles definidos, eventos (ceremonias) y artefactos que guían el trabajo durante ciclos cortos llamados sprints.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Roles en Scrum</h2>
+        <p>Scrum define tres roles principales, que trabajan en conjunto de forma autónoma y colaborativa:</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">1. Product Owner (Propietario del Producto)</h3>
+        <p>• Es el representante del cliente o usuario final.</p>
+        <p>• Define qué se debe construir y en qué orden.</p>
+        <p>• Gestiona el Product Backlog, priorizando los elementos según su valor para el negocio.</p>
+        <p>• Debe garantizar que el equipo trabaje siempre en las tareas que aporten mayor valor.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">2. Scrum Master</h3>
+        <p>• Actúa como facilitador y guía del equipo.</p>
+        <p>• Su función es eliminar obstáculos que afecten el progreso y asegurar que se respeten los principios de Scrum.</p>
+        <p>• No es un jefe, sino un líder servicial, enfocado en mejorar los procesos y la comunicación.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">3. Development Team (Equipo de Desarrollo)</h3>
+        <p>• Grupo multidisciplinario y autoorganizado encargado de desarrollar el producto.</p>
+        <p>• Determina cómo realizar el trabajo dentro del sprint.</p>
+        <p>• Tiene la responsabilidad de entregar un incremento funcional del producto al final de cada sprint.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Sprints</h2>
+        <p>Un Sprint es el corazón de Scrum: un ciclo de desarrollo de 1 a 4 semanas en el que el equipo trabaja para entregar un incremento de producto funcional y potencialmente entregable.</p>
+        <p>• Cada sprint tiene una duración fija, y al finalizar debe entregar resultados tangibles.</p>
+        <p>• Durante un sprint, no se deben realizar cambios importantes en el objetivo, para mantener el enfoque y la estabilidad.</p>
+        <p>Un sprint incluye las siguientes fases: Planificación del Sprint (Sprint Planning), Ejecución y Reuniones Diarias (Daily Scrum), Revisión del Sprint (Sprint Review) y Retrospectiva del Sprint (Sprint Retrospective).</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Backlog</h2>
+        <p>En Scrum, el backlog es la base de la planificación y organización del trabajo. Existen dos tipos principales: el Product Backlog y el Sprint Backlog.</p>
+        <p>El <strong>Product Backlog</strong> contiene todo lo que se desea implementar en el producto, incluyendo funcionalidades, mejoras, correcciones y requisitos técnicos. Es dinámico, ya que se actualiza constantemente según nuevas necesidades del negocio o aprendizajes sobre el producto. Su gestión está a cargo del Product Owner, quien prioriza los elementos que aportan mayor valor al usuario y al negocio.</p>
+        <p>El <strong>Sprint Backlog</strong>, en cambio, es un subconjunto del Product Backlog que el equipo se compromete a completar durante un sprint específico. Contiene no solo las historias de usuario seleccionadas, sino también todas las tareas necesarias para transformar cada elemento en un incremento funcional. Es propiedad del equipo de desarrollo y se actualiza día a día según el progreso del sprint. La gestión del Sprint Backlog permite al equipo mantener el foco en las tareas críticas y adaptar su trabajo frente a obstáculos inesperados.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Puntos clave del backlog:</h3>
+        <p>• El Product Backlog es dinámico y priorizado por valor de negocio.</p>
+        <p>• El Sprint Backlog es gestionado por el equipo y se centra en el sprint actual.</p>
+        <p>• Ambos garantizan que el equipo siempre trabaje en lo más importante para el usuario y el negocio.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Daily Meeting (Scrum Diario)</h2>
+        <p>El Daily Meeting es una reunión diaria breve, de máximo 15 minutos, que sirve para coordinar el trabajo y detectar impedimentos rápidamente. Durante la reunión, cada miembro del equipo comparte tres aspectos fundamentales: lo que hizo el día anterior, lo que planea hacer ese día y los obstáculos que puedan estar bloqueando su trabajo.</p>
+        <p>Aunque breve, esta reunión tiene un gran impacto en la productividad del equipo, ya que permite:</p>
+        <p>• Mantener a todos los miembros alineados con los objetivos del sprint.</p>
+        <p>• Detectar y eliminar impedimentos de manera temprana.</p>
+        <p>• Ajustar la distribución de tareas en caso de ser necesario.</p>
+        <p>El Daily Meeting no es un espacio de reporte ni evaluación, sino un mecanismo de comunicación rápida que fortalece la transparencia y la colaboración dentro del equipo.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Sprint Review (Revisión del Sprint)</h2>
+        <p>La Sprint Review se lleva a cabo al final del sprint para presentar el incremento de producto desarrollado a las partes interesadas, incluyendo clientes y usuarios. Durante esta reunión, el equipo muestra lo que se ha completado y recibe retroalimentación inmediata, la cual se utiliza para adaptar el Product Backlog y redefinir prioridades.</p>
+        <p>Los objetivos principales de la Sprint Review son:</p>
+        <p>• Verificar qué se ha logrado y qué queda pendiente.</p>
+        <p>• Recibir retroalimentación directa de los stakeholders para alinear el producto con sus expectativas.</p>
+        <p>• Ajustar el Product Backlog en función de la información obtenida.</p>
+        <p>Es una reunión colaborativa, donde el enfoque está en la mejora del producto, no en evaluar el desempeño del equipo.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Sprint Retrospective (Retrospectiva del Sprint)</h2>
+        <p>La Sprint Retrospective se realiza después de la revisión y es un espacio para que el equipo reflexione sobre su propio proceso de trabajo. Aquí se analiza qué aspectos del sprint fueron efectivos, cuáles necesitan mejora y qué acciones concretas se pueden implementar en el siguiente sprint.</p>
+        <p>Los beneficios principales de la retrospectiva incluyen:</p>
+        <p>• Identificar y reforzar las prácticas que funcionan bien.</p>
+        <p>• Detectar problemas en la comunicación, organización o técnicas de trabajo.</p>
+        <p>• Proponer cambios que aumenten la productividad y la calidad del producto.</p>
+        <p>Esta reunión fomenta la mejora continua, fortaleciendo la colaboración y el aprendizaje del equipo, y asegurando que cada sprint sea más eficiente que el anterior.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <button class="accordion">Kanban</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>Kanban es una metodología visual de gestión de trabajo que ayuda a equipos y organizaciones a optimizar el flujo de tareas y mejorar la eficiencia de sus procesos. Surgió en el ámbito de la manufactura, pero actualmente se aplica ampliamente en desarrollo de software, marketing, operaciones y otros campos donde se gestionan tareas de forma continua.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Principios Fundamentales de Kanban</h2>
+        <p>Kanban se basa en unos principios clave que permiten mejorar la organización y la entrega de valor:</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Visualizar el flujo de trabajo:</h3>
+        <p>Todas las tareas se representan en un tablero Kanban mediante tarjetas, generalmente organizadas en columnas que representan las etapas del proceso (por ejemplo, "Por hacer", "En progreso", "Finalizado"). Esta visualización facilita la comprensión de cómo avanza el trabajo y dónde existen cuellos de botella.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Limitar el trabajo en curso (WIP - Work In Progress):</h3>
+        <p>Para evitar sobrecargar al equipo y reducir los tiempos de espera, Kanban establece límites al número de tareas que pueden estar activas simultáneamente en cada etapa del proceso. Esto permite mantener un flujo constante y detectar problemas de manera temprana.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Gestionar el flujo de trabajo:</h3>
+        <p>Se busca optimizar cómo las tareas se mueven de una columna a otra, asegurando que el trabajo fluya sin interrupciones innecesarias y se entregue de manera eficiente.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Mejora continua:</h3>
+        <p>Kanban promueve la revisión constante de los procesos mediante métricas como tiempo de ciclo, tiempo de entrega y cantidad de tareas completadas. Esto permite identificar oportunidades de mejora y ajustar el sistema de trabajo progresivamente.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Elementos Clave de un Tablero Kanban</h2>
+        <p>Un tablero Kanban generalmente incluye:</p>
+        <p>• <strong>Tarjetas:</strong> Representan las tareas o ítems de trabajo.</p>
+        <p>• <strong>Columnas:</strong> Reflejan las diferentes etapas del proceso.</p>
+        <p>• <strong>Límites de WIP:</strong> Definen cuántas tareas pueden estar en una columna simultáneamente.</p>
+        <p>• <strong>Señales visuales:</strong> Colores o etiquetas que indican prioridad, bloqueos o tipos de tareas.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Beneficios de Kanban</h2>
+        <p>Implementar Kanban ofrece múltiples ventajas:</p>
+        <p>• Mejora la transparencia del trabajo y el progreso de los proyectos.</p>
+        <p>• Reduce cuellos de botella y retrasos al limitar el trabajo en curso.</p>
+        <p>• Facilita la adaptación a cambios, ya que permite reorganizar las prioridades de forma rápida.</p>
+        <p>• Promueve la colaboración del equipo y la mejora continua de procesos.</p>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>© 2025 - Proyecto académico</p>
   </footer>
+
+  <script>
+    // Funcionalidad del acordeón principal
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        // Toggle clase active
+        this.classList.toggle("active");
+        
+        // Obtener el panel siguiente
+        var panel = this.nextElementSibling;
+        
+        // Expandir o contraer el panel
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </body>
 </html>

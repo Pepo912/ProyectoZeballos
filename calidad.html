@@ -10,22 +10,185 @@
     <h1>Gestión de la Calidad del Software</h1>
   </header>
 
+  
   <nav>
     <a href="index.html">Inicio</a>
-    <a href="fundamentos.html">Fundamentos</a>
-    <a href="tecnicas.html">Técnicas de Aseguramiento de la Calidad</a>
-    <a href="herramientas.html">Herramientas de Calidad</a>
+    <a href="calidad.html">Gestión de la Calidad</a>
+    <a href="sdlc.html">SDLC</a>
+    <a href="metodologias.html">Metodologías Ágiles</a>
   </nav>
 
+
   <section>
-    <div class="card">
-      <p>Sección principal donde se introduce la gestión de la calidad del software y se accede a sus subtemas.</p>
-      <p>La calidad del software se refiere al grado en el que un software cumple con los requisitos especificados y las expectativas del usuario, y se asegura de ser confiable, funcional, eficiente y fácil de usar.</p>
+    <button class="accordion">Fundamentos de la Calidad del Software</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>La gestión de la calidad del software es fundamental para asegurar que los productos desarrollados cumplan con los requisitos y expectativas del cliente, optimizando recursos y reduciendo el riesgo de errores.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Dimensiones clave de calidad (según ISO 9126/25000)</h2>
+        <p>• <strong>Funcionalidad:</strong> El software cumple con las funciones para las que fue diseñado.</p>
+        <p>• <strong>Fiabilidad:</strong> La capacidad del software para realizar su función de manera consistente.</p>
+        <p>• <strong>Usabilidad:</strong> La facilidad con la que los usuarios pueden interactuar con el software.</p>
+        <p>• <strong>Eficiencia:</strong> El software usa los recursos de manera óptima.</p>
+        <p>• <strong>Mantenibilidad:</strong> Qué tan fácil es modificar el software para corregir errores o adaptarlo a nuevos requerimientos.</p>
+        <p>• <strong>Portabilidad:</strong> La facilidad con la que el software puede ser adaptado a diferentes entornos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <button class="accordion">Técnicas de Aseguramiento de la Calidad</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>Las pruebas de software son esenciales para garantizar la calidad del producto. Se clasifican en tipos, niveles y técnicas específicas.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Tipos de Pruebas</h2>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Pruebas Funcionales</h3>
+        <p>Evalúan qué hace el sistema, según los requisitos funcionales.</p>
+        <p>• <strong>Caja Negra:</strong> Se prueban las funcionalidades sin conocer el código interno. Se enfoca en las entradas y salidas del sistema.</p>
+        <p>• <strong>Aceptación:</strong> Pruebas realizadas por el cliente o usuario final para verificar si el sistema cumple con lo acordado (requisitos del negocio).</p>
+        <p>• <strong>Regresión:</strong> Se asegura que las funcionalidades que ya funcionaban siguen haciéndolo después de cambios, correcciones o nuevas funcionalidades.</p>
+        <p>• <strong>Integración (funcional):</strong> Prueban la interacción entre dos o más módulos para verificar que trabajen correctamente juntos.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Pruebas No Funcionales</h3>
+        <p>Evalúan cómo lo hace el sistema, no qué hace.</p>
+        <p>• <strong>Rendimiento (Performance):</strong> Evalúa la rapidez, capacidad de respuesta y estabilidad del sistema bajo ciertas condiciones de carga.</p>
+        <p>• <strong>Seguridad:</strong> Evalúa si el sistema protege los datos y mantiene la confidencialidad, integridad y disponibilidad.</p>
+        <p>• <strong>Usabilidad:</strong> Verifica qué tan fácil e intuitivo es para los usuarios interactuar con el sistema.</p>
+        <p>• <strong>Compatibilidad:</strong> Evalúa si el sistema funciona correctamente en diferentes entornos (navegadores, dispositivos, sistemas operativos, resoluciones, etc.).</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Niveles de Pruebas</h2>
+        <p>Refieren a cuándo y sobre qué parte del software se hacen las pruebas.</p>
+        <p>• <strong>Pruebas Unitarias:</strong> Se prueban unidades pequeñas e individuales de código, como funciones o métodos. Normalmente las realiza el desarrollador.</p>
+        <p>• <strong>Pruebas de Integración:</strong> Se verifica que múltiples módulos o componentes funcionen correctamente cuando se integran entre sí.</p>
+        <p>• <strong>Pruebas de Sistema:</strong> Se prueba el sistema completo, como un todo, para asegurarse de que cumple con los requisitos funcionales y no funcionales.</p>
+        <p>• <strong>Pruebas de Aceptación:</strong> Se realizan antes de liberar el producto. Las hace el cliente o usuario para validar que el software está listo para producción.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Técnicas de Pruebas</h2>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Caja Negra</h3>
+        <p>Pruebas sin conocimiento del código interno. Se enfoca en entradas y salidas.</p>
+        <p>• <strong>Partición de Equivalencia:</strong> Divide las entradas en grupos donde se espera el mismo comportamiento para reducir la cantidad de casos de prueba.</p>
+        <p>• <strong>Análisis de Valores Límite:</strong> Se prueban los valores en los extremos del rango permitido, donde suelen aparecer errores (por ejemplo, si una edad válida es de 18 a 60, se prueban 17, 18, 60, 61).</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Caja Blanca</h3>
+        <p>Pruebas con acceso al código. Se enfoca en la lógica interna.</p>
+        <p>• <strong>Cobertura de Código:</strong> Mide cuánto del código fue ejecutado durante las pruebas (líneas, ramas, condiciones).</p>
+        <p>• <strong>Análisis de Caminos:</strong> Analiza todos los caminos posibles que puede tomar la ejecución del código para cubrir todos los flujos lógicos.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Caja Gris</h3>
+        <p>Pruebas con conocimiento parcial del código. Mezcla técnicas de caja blanca y negra.</p>
+        <p>• <strong>Pruebas de Interfaz:</strong> Verifican la correcta comunicación entre distintos módulos o entre el sistema y componentes externos.</p>
+        <p>• <strong>Pruebas de API:</strong> Evalúan si las interfaces de programación (REST, SOAP, etc.) funcionan como se espera al enviar y recibir datos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <button class="accordion">Herramientas de Calidad</button>
+    <div class="panel">
+      <div class="panel-content">
+        <p>Las herramientas de gestión de pruebas, seguimiento de defectos y análisis de calidad son componentes esenciales en la gestión de la calidad del software. Proveen un marco estructurado para asegurar que el software cumpla con los requisitos y expectativas del cliente, al tiempo que optimizan los recursos y reducen el riesgo de errores. Su uso adecuado no solo mejora la calidad del producto, sino que también contribuye a un proceso de desarrollo más ágil y eficiente.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Selenium</h2>
+        <p><strong>Selenium:</strong> Conjunto de herramientas que permite simular la interacción de un usuario con un navegador de forma automática y controlada por código.</p>
+        <p>• <strong>Selenium WebDriver:</strong> Automatiza el navegador con código.</p>
+        <p>• <strong>Selenium IDE:</strong> Herramienta visual (extensión del navegador) para grabar acciones y generar código.</p>
+        <p>• <strong>Selenium Grid:</strong> Permite ejecutar pruebas en paralelo en múltiples máquinas y navegadores.</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Trello</h2>
+        <p><strong>Trello:</strong> Herramienta de gestión de proyectos y organización de tareas basada en Kanban.</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Funciones:</h3>
+        <p>• Organizar tareas personales o de equipo</p>
+        <p>• Hacer listas de tareas pendientes</p>
+        <p>• Controlar el progreso de un proyecto (pendiente, en proceso, completado)</p>
+        <p>• Recordatorios, metas, ideas</p>
+        <p>• Gestionar proyectos</p>
+        <p>• Asignar tareas a miembros del equipo</p>
+        <p>• Establecer fechas límite (deadlines)</p>
+        <p>• Añadir etiquetas, checklists, comentarios, archivos</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Colaboración en equipo:</h3>
+        <p>• Varias personas pueden trabajar en el mismo tablero en tiempo real</p>
+        <p>• Ideal para equipos remotos o distribuidos</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Planificación:</h3>
+        <p>• Proyectos de desarrollo de software</p>
+        <p>• Planificación de eventos</p>
+        <p>• Calendarios editoriales</p>
+        <p>• Planes de estudio</p>
+        
+        <hr style="border: 2px solid #1E3A8A; margin: 30px 0;">
+        
+        <h2 style="color: #1E3A8A; margin-top: 30px;">Jira</h2>
+        <p><strong>Jira:</strong> Herramienta de gestión de proyectos, desarrollada por Atlassian, que se utiliza principalmente para el seguimiento de errores (bugs), la planificación de tareas y la gestión del desarrollo de software ágil (Scrum, Kanban, etc.).</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Usos principales:</h3>
+        <p>• Gestión de proyectos de software</p>
+        <p>• Planificar versiones (releases)</p>
+        <p>• Dividir el trabajo en tareas o historias de usuario</p>
+        <p>• Asignar tareas a miembros del equipo</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Metodologías ágiles:</h3>
+        <p>• <strong>Scrum:</strong> Sprints, historias de usuario, backlog, burndown charts</p>
+        <p>• <strong>Kanban:</strong> Flujos de trabajo visuales y flexibles</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Seguimiento de errores (bug tracking):</h3>
+        <p>• Reportar, asignar y resolver errores en el código</p>
+        <p>• Registrar comentarios, adjuntar capturas o archivos</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Gestión del flujo de trabajo (workflow):</h3>
+        <p>• Personalizar el ciclo de vida de una tarea (Por hacer → En desarrollo → En revisión → Hecho)</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Colaboración en equipo:</h3>
+        <p>• Comentarios en tareas</p>
+        <p>• Notificaciones y menciones</p>
+        
+        <h3 style="color: #1E3A8A; margin-top: 20px;">Integración con otras herramientas:</h3>
+        <p>• GitHub, Bitbucket, Confluence, Slack</p>
+      </div>
     </div>
   </section>
 
   <footer>
     <p>© 2025 - Proyecto académico</p>
   </footer>
+
+  <script>
+    // Funcionalidad del acordeón
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        // Toggle clase active
+        this.classList.toggle("active");
+        
+        // Obtener el panel siguiente
+        var panel = this.nextElementSibling;
+        
+        // Expandir o contraer el panel
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
