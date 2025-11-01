@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Secciones Adicionales</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Secciones Adicionales</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="calidad.html">Gestión de la Calidad</a>
+    <a href="sdlc.html">Procesos de Desarrollo de Software</a>
+    <a href="metodologias.html">Metodologías Ágiles</a>
+    <a href="recursos.html">Recursos y Aprendizaje</a>
+    <a href="funcionalidades.html">Funcionalidades</a>
+    <a href="adicionales.html">Secciones Adicionales</a>
+  </nav>
+
+  <section>
+    <div class="card">
+      <h2>Sobre Nosotros</h2>
+      <h3>Nuestro Equipo</h3>
+      <p>Nuestro grupo está conformado por cuatro integrantes que desempeñan roles clave en el desarrollo del proyecto “Sistemas de Gestión de Calidad”. Cada uno aporta sus habilidades, conocimientos y compromiso para lograr un producto completo, funcional y coherente con los objetivos del trabajo.</p>
+
+      <h4>Pedro Alveal – Scrum Master</h4>
+      <p>Pedro es el Scrum Master del equipo y se encarga de coordinar las actividades, organizar las reuniones y garantizar que se cumplan los principios y prácticas de la metodología ágil. Su función principal es facilitar la comunicación, eliminar obstáculos que afecten el avance del grupo y asegurar que todos los integrantes mantengan una visión compartida del proyecto. Gracias a su liderazgo y enfoque colaborativo, el equipo trabaja de manera ordenada, eficiente y con una constante mejora en cada sprint.</p>
+
+      <h4>Gustavo Sepúlveda – Documentador</h4>
+      <p>Gustavo desempeña el rol de Documentador, siendo responsable de registrar todo el proceso de desarrollo. Su tarea consiste en elaborar y mantener actualizados los documentos del proyecto, como los informes técnicos, las historias de usuario, las descripciones de las secciones y los artefactos del sistema. Además, se encarga de que la información sea clara, coherente y accesible, lo que permite un seguimiento transparente del avance del proyecto.</p>
+
+      <h4>Donatto Cancio – Programador</h4>
+      <p>Donatto es el Programador principal y tiene a su cargo la implementación técnica del sistema. Es responsable de transformar los requerimientos funcionales en código, aplicar las lógicas del sistema y asegurar que el producto sea eficiente, escalable y fácil de mantener. Su enfoque está en la calidad del código, la correcta integración de las funcionalidades y la resolución de posibles errores durante el desarrollo. Su aporte técnico es esencial para que las ideas del grupo se conviertan en una aplicación real.</p>
+
+      <h4>Tiago Vicente – Diseñador</h4>
+      <p>Tiago ocupa el rol de Diseñador, responsable de la interfaz visual y la experiencia del usuario (UI/UX). Se encarga de crear el diseño gráfico del sistema, definir la paleta de colores, tipografías, distribución de elementos y la usabilidad de cada componente visual. Su objetivo es lograr que la interfaz sea intuitiva, atractiva y coherente con la identidad del proyecto, facilitando la interacción de los usuarios con el sistema de manera cómoda y fluida.</p>
+
+      <h3>Motivación del Proyecto “Sistemas de Gestión de Calidad”</h3>
+      <p>El desarrollo de este proyecto nace de la necesidad de comprender y aplicar los principios de la gestión de calidad dentro del ámbito del software, un aspecto fundamental para garantizar productos confiables, eficientes y sostenibles.</p>
+      <p>Nuestro objetivo principal es difundir la importancia de los sistemas de gestión de calidad como herramientas que permiten optimizar los procesos, mejorar la productividad y asegurar la satisfacción del usuario final.</p>
+      <p>A través de este proyecto buscamos no solo aplicar conocimientos técnicos, sino también integrar valores como la mejora continua, la responsabilidad y la colaboración. Creemos que la calidad no es un resultado aislado, sino una consecuencia de un trabajo bien planificado, comunicativo y comprometido con la excelencia.</p>
+      <p>En definitiva, este proyecto representa nuestro interés por formar parte de una nueva generación de desarrolladores conscientes de la calidad, capaces de construir soluciones tecnológicas que aporten valor real a las organizaciones y a la sociedad.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Formulario de Contacto</h2>
+      <form id="contactForm">
+        <div class="form-group">
+          <label for="nombreUsuario">Nombre del usuario</label>
+          <input type="text" id="nombreUsuario" required>
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" id="apellido" required>
+        </div>
+        <div class="form-group">
+          <label for="contacto">Contacto</label>
+          <input type="text" id="contacto" placeholder="Email o teléfono" required>
+        </div>
+        <div class="form-group">
+          <label for="consulta">Consulta</label>
+          <textarea id="consulta" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+        <div id="contactoResultado" class="results"></div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p> 2025 - Proyecto académico</p>
+  </footer>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      var nombre = document.getElementById('nombreUsuario').value.trim();
+      var apellido = document.getElementById('apellido').value.trim();
+      var contacto = document.getElementById('contacto').value.trim();
+      var consulta = document.getElementById('consulta').value.trim();
+      if (!nombre || !apellido || !contacto || !consulta) {
+        document.getElementById('contactoResultado').textContent = 'Completa todos los campos.';
+        return;
+      }
+      document.getElementById('contactoResultado').textContent = '¡Gracias por tu mensaje! Te responderemos pronto.';
+      this.reset();
+    });
+  </script>
+</body>
+</html>

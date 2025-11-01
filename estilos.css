@@ -4,6 +4,117 @@ body {
   background-color: #87CEFA; /* celeste claro */
 }
 
+/* Navegación suave a anclas */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Listas de enlaces */
+.links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.links-list li {
+  margin: 8px 0;
+}
+.links-list a {
+  color: #1E3A8A;
+  text-decoration: underline;
+}
+
+/* Grid de ejercicios */
+.ej-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Controles del comparador */
+.compare-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 20px 0;
+}
+.compare-controls label {
+  background: #FFE4B5;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+/* Botón genérico */
+.btn {
+  background: #1E3A8A;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #15306a;
+}
+
+/* Tabla comparativa */
+.table-wrap {
+  overflow-x: auto;
+}
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background: #fff;
+}
+.compare-table th, .compare-table td {
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  text-align: left;
+}
+.compare-table thead th {
+  background: #4682B4;
+  color: #fff;
+}
+
+/* Formularios */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 10px 0 20px 0;
+}
+.form-group {
+  text-align: left;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #1E3A8A;
+  font-weight: bold;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+/* Resultados/mensajes */
+.results {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #1E3A8A;
+}
+
+
 header {
   background: #4682B4; /* azul oscuro */
   color: white;

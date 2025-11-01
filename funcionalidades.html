@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Funcionalidades</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header>
+    <h1>Funcionalidades</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="calidad.html">Gestión de la Calidad</a>
+    <a href="sdlc.html">Procesos de Desarrollo de Software</a>
+    <a href="metodologias.html">Metodologías Ágiles</a>
+    <a href="recursos.html">Recursos y Aprendizaje</a>
+    <a href="funcionalidades.html">Funcionalidades</a>
+    <a href="adicionales.html">Secciones Adicionales</a>
+  </nav>
+
+  <section>
+    <div class="card">
+      <h2>Comparador de Metodologías</h2>
+      <p>Selecciona metodologías y compara sus características clave.</p>
+      <div class="compare-controls">
+        <label><input type="checkbox" name="met" value="Scrum" checked> Scrum</label>
+        <label><input type="checkbox" name="met" value="Kanban" checked> Kanban</label>
+        <label><input type="checkbox" name="met" value="XP"> XP</label>
+        <label><input type="checkbox" name="met" value="Cascada"> Cascada</label>
+        <label><input type="checkbox" name="met" value="Modelo en V"> Modelo en V</label>
+        <label><input type="checkbox" name="met" value="Modelo Incremental"> Incremental</label>
+        <button id="btnComparar" class="btn">Comparar</button>
+      </div>
+      <div id="compareResult"></div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h2>Encuesta de Preferencias Metodológicas</h2>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="tamEquipo">Tamaño del equipo</label>
+          <select id="tamEquipo">
+            <option value="grande">Más de 15 personas</option>
+            <option value="mediano">Entre 5 y 10 personas</option>
+            <option value="pequeno">Menos de 5 personas</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="incertidumbre">¿Qué tan definidos están los requisitos?</label>
+          <select id="incertidumbre">
+            <option value="baja">Están completamente definidos desde el inicio</option>
+            <option value="media">Algunos están claros, pero pueden cambiar</option>
+            <option value="alta">Son poco claros y evolucionan constantemente</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="flexibilidad">¿Qué nivel de flexibilidad necesitás frente a los cambios?</label>
+          <select id="flexibilidad">
+            <option value="baja">Prefiero un plan rígido</option>
+            <option value="media">Admito algunos cambios, pero controlados</option>
+            <option value="alta">Necesito adaptarme constantemente</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="organizacion">¿Cómo está organizado tu equipo?</label>
+          <select id="organizacion">
+            <option value="jerarquia">Jerárquicamente, con roles muy definidos</option>
+            <option value="flex">Liderazgo flexible y comunicación constante</option>
+            <option value="colab">Sin jerarquías fijas, colaborativo y continuo</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="frecuencia">¿Con qué frecuencia necesitás entregar resultados?</label>
+          <select id="frecuencia">
+            <option value="final">Solo al final del proyecto</option>
+            <option value="etapas">En cada etapa o versión</option>
+            <option value="continua">De manera continua</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="documentacion">¿Cuánto valorás la documentación formal?</label>
+          <select id="documentacion">
+            <option value="alta">Mucho, completa y detallada</option>
+            <option value="media">Moderadamente, lo esencial</option>
+            <option value="baja">Prefiero enfocarme en el producto</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="comunicacion">¿Cómo es la comunicación con el cliente?</label>
+          <select id="comunicacion">
+            <option value="ocasional">Ocasional</option>
+            <option value="frecuente">Frecuente</option>
+            <option value="constante">Constante</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="velocidad">¿Qué tan importante es la velocidad de entrega?</label>
+          <select id="velocidad">
+            <option value="baja">Importa hacerlo bien</option>
+            <option value="media">Equilibrio</option>
+            <option value="alta">Entregar rápido y mejorar</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="tipoProyecto">¿Qué tipo de proyecto estás desarrollando?</label>
+          <select id="tipoProyecto">
+            <option value="complejo">Sistema complejo y bien estructurado</option>
+            <option value="evolutivo">Aplicación en evolución/fases</option>
+            <option value="innovador">Producto innovador o cambiante</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="prioridad">¿Cuál es tu prioridad principal?</label>
+          <select id="prioridad">
+            <option value="plazos">Cumplir plazos y plan</option>
+            <option value="calidad">Mejorar calidad durante el desarrollo</option>
+            <option value="cambio">Adaptarme rápidamente al cambio</option>
+          </select>
+        </div>
+      </div>
+      <button id="btnSugerir" class="btn">Obtener sugerencia</button>
+      <div id="sugerencia" class="results"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p> 2025 - Proyecto académico</p>
+  </footer>
+
+  <script>
+    var dataMet = {
+      Scrum: {
+        'Objetivo principal': 'Organizar el trabajo en ciclos cortos (sprints) para entregar valor de forma continua.',
+        'Estructura del trabajo': 'Iteraciones fijas llamadas sprints (1 a 4 semanas).',
+        'Roles principales': 'Product Owner, Scrum Master, Equipo de Desarrollo.',
+        'Artefactos clave': 'Product Backlog, Sprint Backlog, Incremento del producto.',
+        'Enfoque principal': 'Entregas incrementales y priorización del valor para el cliente.',
+        'Gestión del tiempo': 'Sprints de duración fija con planificación y revisión.',
+        'Flexibilidad ante cambios': 'Alta, los cambios se gestionan entre sprints.',
+        'Herramientas comunes': 'Tablero Scrum, Burndown Chart, reuniones diarias.',
+        'Comunicación y reuniones': 'Daily meeting, revisión, planificación y retrospectiva.',
+        'Ventajas': 'Organización clara, roles definidos, mejora continua.',
+        'Limitaciones': 'Puede generar rigidez si no se adapta bien.',
+        'Aplicable en': 'Equipos medianos o grandes con metas claras.',
+        'Orientación principal': 'Gestión del trabajo en equipo y entrega incremental.'
+      },
+      Kanban: {
+        'Objetivo principal': 'Visualizar y optimizar el flujo de trabajo reduciendo cuellos de botella.',
+        'Estructura del trabajo': 'Flujo continuo sin iteraciones fijas.',
+        'Roles principales': 'No define roles fijos; se adapta al equipo existente.',
+        'Artefactos clave': 'Tablero Kanban, tarjetas de tareas, límites WIP.',
+        'Enfoque principal': 'Flujo de trabajo continuo y eficiencia en las tareas.',
+        'Gestión del tiempo': 'Sin límite fijo; las tareas avanzan según disponibilidad.',
+        'Flexibilidad ante cambios': 'Muy alta, se pueden aplicar en cualquier momento.',
+        'Herramientas comunes': 'Tablero Kanban físico o digital.',
+        'Comunicación y reuniones': 'Comunicación constante, sin reuniones obligatorias.',
+        'Ventajas': 'Simplicidad, visibilidad del flujo, alta adaptabilidad.',
+        'Limitaciones': 'Puede ser poco estructurado si no se gestiona bien.',
+        'Aplicable en': 'Equipos pequeños o medianos con flujo continuo.',
+        'Orientación principal': 'Visualización y eficiencia del flujo de tareas.'
+      },
+      XP: {
+        'Objetivo principal': 'Mejorar la calidad del software mediante prácticas técnicas ágiles.',
+        'Estructura del trabajo': 'Ciclos cortos con entregas frecuentes.',
+        'Roles principales': 'Programadores, clientes, testers, coach técnico.',
+        'Artefactos clave': 'Historias de usuario, pruebas unitarias, integración continua.',
+        'Enfoque principal': 'Calidad del código y mejora técnica constante.',
+        'Gestión del tiempo': 'Entregas frecuentes, generalmente diarias o semanales.',
+        'Flexibilidad ante cambios': 'Alta, los cambios se incorporan rápidamente.',
+        'Herramientas comunes': 'Testing automatizado, control de versiones, refactorización.',
+        'Comunicación y reuniones': 'Comunicación directa y continua con el cliente.',
+        'Ventajas': 'Alta calidad del producto, menos errores.',
+        'Limitaciones': 'Requiere alto nivel técnico y compromiso.',
+        'Aplicable en': 'Proyectos de software donde la calidad es prioritaria.',
+        'Orientación principal': 'Excelencia técnica y respuesta rápida al cambio.'
+      },
+      Cascada: {
+        'Objetivo principal': 'Desarrollar el sistema de forma secuencial y ordenada, etapa por etapa.',
+        'Estructura del trabajo': 'Lineal y secuencial; cada fase debe completarse antes de iniciar la siguiente.',
+        'Roles principales': 'Analista, diseñador, programador, tester y cliente (inicio y fin).',
+        'Artefactos clave': 'Documentación detallada, especificaciones de requisitos, diseño técnico y código final.',
+        'Enfoque principal': 'Planificación y documentación exhaustiva.',
+        'Gestión del tiempo': 'Fases largas y rígidas; entrega al final del proceso.',
+        'Flexibilidad ante cambios': 'Muy baja; cambios costosos.',
+        'Herramientas comunes': 'Documentación, UML, editores de código.',
+        'Comunicación y reuniones': 'Principalmente al inicio y al final.',
+        'Ventajas': 'Simplicidad, fácil de gestionar, buena documentación.',
+        'Limitaciones': 'Poca flexibilidad, alto riesgo si cambian requisitos.',
+        'Aplicable en': 'Proyectos pequeños y bien definidos.',
+        'Orientación principal': 'Procesos y planificación.'
+      },
+      'Modelo en V': {
+        'Objetivo principal': 'Asegurar la verificación y validación en cada fase del desarrollo.',
+        'Estructura del trabajo': 'Cada fase de desarrollo tiene pruebas asociadas.',
+        'Roles principales': 'Analista, diseñador, programador y tester con participación constante.',
+        'Artefactos clave': 'Requisitos, diseño, planes y casos de prueba.',
+        'Enfoque principal': 'Calidad y validación temprana.',
+        'Gestión del tiempo': 'Fases secuenciales con pruebas tras cada etapa.',
+        'Flexibilidad ante cambios': 'Baja; detección más temprana de errores.',
+        'Herramientas comunes': 'Pruebas, gestión de calidad, documentación.',
+        'Comunicación y reuniones': 'Revisión y validación en cada fase.',
+        'Ventajas': 'Mayor control de calidad, detección temprana.',
+        'Limitaciones': 'Complejidad de gestión de pruebas, poca flexibilidad.',
+        'Aplicable en': 'Proyectos críticos (médico, aeroespacial).',
+        'Orientación principal': 'Calidad y verificación.'
+      },
+      'Modelo Incremental': {
+        'Objetivo principal': 'Entregar versiones funcionales del software progresivamente.',
+        'Estructura del trabajo': 'Iteraciones; en cada incremento se agrega o mejora funcionalidad.',
+        'Roles principales': 'Equipo de desarrollo, cliente activo, gestor de proyecto y testers.',
+        'Artefactos clave': 'Prototipos, versiones incrementales y backlog.',
+        'Enfoque principal': 'Entrega temprana de valor y mejora continua.',
+        'Gestión del tiempo': 'Iteraciones cortas con entregas parciales frecuentes.',
+        'Flexibilidad ante cambios': 'Alta; ajuste por feedback.',
+        'Herramientas comunes': 'Control de versiones, gestión de requerimientos, CI.',
+        'Comunicación y reuniones': 'Constante; cliente participa activamente.',
+        'Ventajas': 'Entregas tempranas, alta adaptabilidad, menor riesgo.',
+        'Limitaciones': 'Planificación más compleja, necesidad de coordinación.',
+        'Aplicable en': 'Proyectos medianos o grandes con requisitos cambiantes.',
+        'Orientación principal': 'Funcionalidad y evolución.'
+      }
+    };
+
+    var features = [
+      'Objetivo principal',
+      'Estructura del trabajo',
+      'Roles principales',
+      'Artefactos clave',
+      'Enfoque principal',
+      'Gestión del tiempo',
+      'Flexibilidad ante cambios',
+      'Herramientas comunes',
+      'Comunicación y reuniones',
+      'Ventajas',
+      'Limitaciones',
+      'Aplicable en',
+      'Orientación principal'
+    ];
+
+    function renderComparacion(seleccion) {
+      if (!seleccion.length) {
+        document.getElementById('compareResult').innerHTML = '<p>Selecciona al menos una metodología.</p>';
+        return;
+      }
+      var html = '<div class="table-wrap"><table class="compare-table"><thead><tr><th>Característica</th>';
+      seleccion.forEach(function(m){ html += '<th>' + m + '</th>'; });
+      html += '</tr></thead><tbody>';
+      features.forEach(function(f){
+        html += '<tr><td><strong>' + f + '</strong></td>';
+        seleccion.forEach(function(m){ html += '<td>' + (dataMet[m][f] || '-') + '</td>'; });
+        html += '</tr>';
+      });
+      html += '</tbody></table></div>';
+      document.getElementById('compareResult').innerHTML = html;
+    }
+
+    document.getElementById('btnComparar').addEventListener('click', function(){
+      var checks = document.querySelectorAll('input[name="met"]:checked');
+      var seleccion = Array.prototype.map.call(checks, function(c){ return c.value; });
+      renderComparacion(seleccion);
+    });
+    renderComparacion(['Scrum','Kanban']);
+
+    document.getElementById('btnSugerir').addEventListener('click', function(){
+      var tam = document.getElementById('tamEquipo').value;
+      var inc = document.getElementById('incertidumbre').value;
+      var sugerida = 'Scrum';
+      if (inc === 'alta' && tam === 'pequeno') sugerida = 'Kanban';
+      if (inc === 'baja' && tam === 'grande') sugerida = 'Cascada';
+      document.getElementById('sugerencia').textContent = 'Sugerencia: ' + sugerida;
+    });
+  </script>
+</body>
+</html>
